@@ -17,7 +17,7 @@
  *  Web Speech API: https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html
  *  Web Speech Recognition API: https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html
  */
-module.exports = {init : (function (root, factory) {
+(function (root, factory) {
   if (typeof define === 'function' && define.amd)
     define('p5.speech', ['p5'], function (p5) { (factory(p5));});
   else if (typeof exports === 'object')
@@ -332,7 +332,7 @@ module.exports = {init : (function (root, factory) {
     }
   };
 
-}))};
+}));
 
 /*
 todo:
