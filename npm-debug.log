@@ -1,0 +1,293 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   '@google-cloud/speechC:\\Users\\willi\\OneDrive',
+1 verbose cli   '-',
+1 verbose cli   'NEXT',
+1 verbose cli   'Uddannelse',
+1 verbose cli   'København\\2G',
+1 verbose cli   '(8-8-18',
+1 verbose cli   '-',
+1 verbose cli   ')\\PRIVAT\\MRRAD\\server' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.3
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData @google-cloud/speechC:\Users\willi\OneDrive
+8 silly fetchPackageMetaData -
+9 silly fetchPackageMetaData NEXT
+10 silly fetchPackageMetaData Uddannelse
+11 silly fetchPackageMetaData København\2G
+12 silly fetchPackageMetaData (8-8-18
+13 silly fetchPackageMetaData -
+14 silly fetchPackageMetaData )\PRIVAT\MRRAD\server
+15 silly fetchOtherPackageData @google-cloud/speechC:\Users\willi\OneDrive
+16 silly cache add args [ '@google-cloud/speechC:\\Users\\willi\\OneDrive', null ]
+17 verbose cache add spec @google-cloud/speechC:\Users\willi\OneDrive
+18 silly fetchOtherPackageData -
+19 silly cache add args [ '-', null ]
+20 verbose cache add spec -
+21 silly fetchNamedPackageData NEXT
+22 silly mapToRegistry name NEXT
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'NEXT',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   escapedName: 'NEXT',
+25 silly mapToRegistry   name: 'NEXT',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/NEXT
+27 silly fetchNamedPackageData Uddannelse
+28 silly mapToRegistry name Uddannelse
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry data Result {
+31 silly mapToRegistry   raw: 'Uddannelse',
+31 silly mapToRegistry   scope: null,
+31 silly mapToRegistry   escapedName: 'Uddannelse',
+31 silly mapToRegistry   name: 'Uddannelse',
+31 silly mapToRegistry   rawSpec: '',
+31 silly mapToRegistry   spec: 'latest',
+31 silly mapToRegistry   type: 'tag' }
+32 silly mapToRegistry uri https://registry.npmjs.org/Uddannelse
+33 silly fetchOtherPackageData København\2G
+34 silly cache add args [ 'København\\2G', null ]
+35 verbose cache add spec København\2G
+36 silly fetchOtherPackageData (8-8-18
+37 silly cache add args [ '(8-8-18', null ]
+38 verbose cache add spec (8-8-18
+39 silly fetchOtherPackageData -
+40 silly cache add args [ '-', null ]
+41 verbose cache add spec -
+42 silly fetchOtherPackageData )\PRIVAT\MRRAD\server
+43 silly cache add args [ ')\\PRIVAT\\MRRAD\\server', null ]
+44 verbose cache add spec )\PRIVAT\MRRAD\server
+45 silly cache add parsed spec Result {
+45 silly cache add   raw: '@google-cloud/speechC:\\Users\\willi\\OneDrive',
+45 silly cache add   scope: null,
+45 silly cache add   escapedName: null,
+45 silly cache add   name: null,
+45 silly cache add   rawSpec: '@google-cloud/speechC:\\Users\\willi\\OneDrive',
+45 silly cache add   spec: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\@google-cloud\\speechC:\\Users\\willi\\OneDrive',
+45 silly cache add   type: 'local' }
+46 silly cache add parsed spec Result {
+46 silly cache add   raw: '-',
+46 silly cache add   scope: null,
+46 silly cache add   escapedName: null,
+46 silly cache add   name: null,
+46 silly cache add   rawSpec: '-',
+46 silly cache add   spec: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\-',
+46 silly cache add   type: 'local' }
+47 verbose request uri https://registry.npmjs.org/NEXT
+48 verbose request no auth needed
+49 info attempt registry request try #1 at 11:31:57 AM
+50 verbose request id 5b3e2f7c6838e6b1
+51 http request GET https://registry.npmjs.org/NEXT
+52 verbose request uri https://registry.npmjs.org/Uddannelse
+53 verbose request no auth needed
+54 info attempt registry request try #1 at 11:31:57 AM
+55 http request GET https://registry.npmjs.org/Uddannelse
+56 silly cache add parsed spec Result {
+56 silly cache add   raw: 'København\\2G',
+56 silly cache add   scope: null,
+56 silly cache add   escapedName: null,
+56 silly cache add   name: null,
+56 silly cache add   rawSpec: 'København\\2G',
+56 silly cache add   spec: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\København\\2G',
+56 silly cache add   type: 'local' }
+57 silly cache add parsed spec Result {
+57 silly cache add   raw: '(8-8-18',
+57 silly cache add   scope: null,
+57 silly cache add   escapedName: null,
+57 silly cache add   name: null,
+57 silly cache add   rawSpec: '(8-8-18',
+57 silly cache add   spec: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\(8-8-18',
+57 silly cache add   type: 'local' }
+58 silly cache add parsed spec Result {
+58 silly cache add   raw: '-',
+58 silly cache add   scope: null,
+58 silly cache add   escapedName: null,
+58 silly cache add   name: null,
+58 silly cache add   rawSpec: '-',
+58 silly cache add   spec: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\-',
+58 silly cache add   type: 'local' }
+59 silly cache add parsed spec Result {
+59 silly cache add   raw: ')\\PRIVAT\\MRRAD\\server',
+59 silly cache add   scope: null,
+59 silly cache add   escapedName: null,
+59 silly cache add   name: null,
+59 silly cache add   rawSpec: ')\\PRIVAT\\MRRAD\\server',
+59 silly cache add   spec: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\)\\PRIVAT\\MRRAD\\server',
+59 silly cache add   type: 'local' }
+60 error addLocal Could not install C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\@google-cloud\speechC:\Users\willi\OneDrive
+61 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\@google-cloud\speechC:\Users\willi\OneDrive'
+61 silly fetchPackageMetaData     at Error (native)
+61 silly fetchPackageMetaData  error for @google-cloud/speechC:\Users\willi\OneDrive { Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\@google-cloud\speechC:\Users\willi\OneDrive'
+61 silly fetchPackageMetaData     at Error (native)
+61 silly fetchPackageMetaData   errno: -4058,
+61 silly fetchPackageMetaData   code: 'ENOENT',
+61 silly fetchPackageMetaData   syscall: 'open',
+61 silly fetchPackageMetaData   path: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\@google-cloud\\speechC:\\Users\\willi\\OneDrive' }
+62 error addLocal Could not install C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\-
+63 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\-'
+63 silly fetchPackageMetaData     at Error (native)
+63 silly fetchPackageMetaData  error for - { Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\-'
+63 silly fetchPackageMetaData     at Error (native)
+63 silly fetchPackageMetaData   errno: -4058,
+63 silly fetchPackageMetaData   code: 'ENOENT',
+63 silly fetchPackageMetaData   syscall: 'open',
+63 silly fetchPackageMetaData   path: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\-' }
+64 error addLocal Could not install C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\København\2G
+65 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\København\2G'
+65 silly fetchPackageMetaData     at Error (native)
+65 silly fetchPackageMetaData  error for København\2G { Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\København\2G'
+65 silly fetchPackageMetaData     at Error (native)
+65 silly fetchPackageMetaData   errno: -4058,
+65 silly fetchPackageMetaData   code: 'ENOENT',
+65 silly fetchPackageMetaData   syscall: 'open',
+65 silly fetchPackageMetaData   path: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\København\\2G' }
+66 error addLocal Could not install C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\(8-8-18
+67 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\(8-8-18'
+67 silly fetchPackageMetaData     at Error (native)
+67 silly fetchPackageMetaData  error for (8-8-18 { Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\(8-8-18'
+67 silly fetchPackageMetaData     at Error (native)
+67 silly fetchPackageMetaData   errno: -4058,
+67 silly fetchPackageMetaData   code: 'ENOENT',
+67 silly fetchPackageMetaData   syscall: 'open',
+67 silly fetchPackageMetaData   path: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\(8-8-18' }
+68 error addLocal Could not install C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\-
+69 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\-'
+69 silly fetchPackageMetaData     at Error (native)
+69 silly fetchPackageMetaData  error for - { Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\-'
+69 silly fetchPackageMetaData     at Error (native)
+69 silly fetchPackageMetaData   errno: -4058,
+69 silly fetchPackageMetaData   code: 'ENOENT',
+69 silly fetchPackageMetaData   syscall: 'open',
+69 silly fetchPackageMetaData   path: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\-' }
+70 error addLocal Could not install C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\)\PRIVAT\MRRAD\server
+71 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\)\PRIVAT\MRRAD\server'
+71 silly fetchPackageMetaData     at Error (native)
+71 silly fetchPackageMetaData  error for )\PRIVAT\MRRAD\server { Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\)\PRIVAT\MRRAD\server'
+71 silly fetchPackageMetaData     at Error (native)
+71 silly fetchPackageMetaData   errno: -4058,
+71 silly fetchPackageMetaData   code: 'ENOENT',
+71 silly fetchPackageMetaData   syscall: 'open',
+71 silly fetchPackageMetaData   path: 'C:\\Users\\willi\\OneDrive - NEXT Uddannelse København\\2G (8-8-18 - )\\PRIVAT\\MRRAD\\)\\PRIVAT\\MRRAD\\server' }
+72 http 404 https://registry.npmjs.org/NEXT
+73 verbose headers { date: 'Tue, 26 Mar 2019 10:32:04 GMT',
+73 verbose headers   'content-type': 'application/json',
+73 verbose headers   'content-length': '21',
+73 verbose headers   connection: 'keep-alive',
+73 verbose headers   'set-cookie': [ '__cfduid=d3d0fb4e235e7fe83269401cb0b693c7a1553596323; expires=Wed, 25-Mar-20 10:32:03 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+73 verbose headers   'cf-cache-status': 'MISS',
+73 verbose headers   'cache-control': 'max-age=300',
+73 verbose headers   'cf-ray': '4bd87560ecf63d01-CPH',
+73 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+73 verbose headers   vary: 'accept-encoding, accept',
+73 verbose headers   server: 'cloudflare' }
+74 silly get cb [ 404,
+74 silly get   { date: 'Tue, 26 Mar 2019 10:32:04 GMT',
+74 silly get     'content-type': 'application/json',
+74 silly get     'content-length': '21',
+74 silly get     connection: 'keep-alive',
+74 silly get     'set-cookie': [ '__cfduid=d3d0fb4e235e7fe83269401cb0b693c7a1553596323; expires=Wed, 25-Mar-20 10:32:03 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+74 silly get     'cf-cache-status': 'MISS',
+74 silly get     'cache-control': 'max-age=300',
+74 silly get     'cf-ray': '4bd87560ecf63d01-CPH',
+74 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+74 silly get     vary: 'accept-encoding, accept',
+74 silly get     server: 'cloudflare' } ]
+75 silly fetchPackageMetaData Error: Not found : NEXT
+75 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+75 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+75 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+75 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+75 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+75 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+75 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+75 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+75 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+75 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+75 silly fetchPackageMetaData  error for NEXT { Error: Not found : NEXT
+75 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+75 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+75 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+75 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+75 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+75 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+75 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+75 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+75 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+75 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12) pkgid: 'NEXT', statusCode: 404, code: 'E404' }
+76 http 404 https://registry.npmjs.org/Uddannelse
+77 verbose headers { date: 'Tue, 26 Mar 2019 10:32:04 GMT',
+77 verbose headers   'content-type': 'application/json',
+77 verbose headers   'content-length': '21',
+77 verbose headers   connection: 'keep-alive',
+77 verbose headers   'set-cookie': [ '__cfduid=d063cabc8c1357c8c161c7e77c3eb612d1553596323; expires=Wed, 25-Mar-20 10:32:03 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+77 verbose headers   'cf-cache-status': 'MISS',
+77 verbose headers   'cache-control': 'max-age=300',
+77 verbose headers   'cf-ray': '4bd87560dc443d3d-CPH',
+77 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+77 verbose headers   vary: 'accept-encoding, accept',
+77 verbose headers   server: 'cloudflare' }
+78 silly get cb [ 404,
+78 silly get   { date: 'Tue, 26 Mar 2019 10:32:04 GMT',
+78 silly get     'content-type': 'application/json',
+78 silly get     'content-length': '21',
+78 silly get     connection: 'keep-alive',
+78 silly get     'set-cookie': [ '__cfduid=d063cabc8c1357c8c161c7e77c3eb612d1553596323; expires=Wed, 25-Mar-20 10:32:03 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+78 silly get     'cf-cache-status': 'MISS',
+78 silly get     'cache-control': 'max-age=300',
+78 silly get     'cf-ray': '4bd87560dc443d3d-CPH',
+78 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+78 silly get     vary: 'accept-encoding, accept',
+78 silly get     server: 'cloudflare' } ]
+79 silly fetchPackageMetaData Error: Not found : Uddannelse
+79 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+79 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+79 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+79 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+79 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+79 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+79 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+79 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+79 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+79 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+79 silly fetchPackageMetaData  error for Uddannelse { Error: Not found : Uddannelse
+79 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+79 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+79 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+79 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+79 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+79 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+79 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+79 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+79 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+79 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12) pkgid: 'Uddannelse', statusCode: 404, code: 'E404' }
+80 silly rollbackFailedOptional Starting
+81 silly rollbackFailedOptional Finishing
+82 silly runTopLevelLifecycles Finishing
+83 silly install printInstalled
+84 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\@google-cloud\speechC:\Users\willi\OneDrive'
+84 verbose stack     at Error (native)
+85 verbose cwd C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD
+86 error Windows_NT 10.0.17134
+87 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "@google-cloud/speechC:\\Users\\willi\\OneDrive" "-" "NEXT" "Uddannelse" "København\\2G" "(8-8-18" "-" ")\\PRIVAT\\MRRAD\\server"
+88 error node v6.11.3
+89 error npm  v3.10.10
+90 error path C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\@google-cloud\speechC:\Users\willi\OneDrive
+91 error code ENOENT
+92 error errno -4058
+93 error syscall open
+94 error enoent ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\@google-cloud\speechC:\Users\willi\OneDrive'
+95 error enoent ENOENT: no such file or directory, open 'C:\Users\willi\OneDrive - NEXT Uddannelse København\2G (8-8-18 - )\PRIVAT\MRRAD\@google-cloud\speechC:\Users\willi\OneDrive'
+95 error enoent This is most likely not a problem with npm itself
+95 error enoent and is related to npm not being able to find a file.
+96 verbose exit [ -4058, true ]
