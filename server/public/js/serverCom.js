@@ -14,5 +14,7 @@ async function sendRequest(relativeUrl, data){
   var bodyData = JSON.stringify(data);
   xhttp.send(bodyData);
   let result = await promise
-  return result
+  result.then(function(value){
+      return value;
+  })
 }
