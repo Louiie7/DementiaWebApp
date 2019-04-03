@@ -4,10 +4,20 @@
     <head>
       <script src="js/index.js"></script>
       <script src="js/serverCom.js"></script>
+      <script src="js/speechRecognition.js"></script>
+      <script src="js/speechSynthesis.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
-    <body>
-      <input type="button" id = "Record" value="Record thought">
-      <input type="button" id = "Receive" value="Get thought">
-
+    <body style="margin:0">
+      <div id="container">
+        <div class="btn-container">
+          <h2> Record your thought </h2>
+          <input type="button" class="btns" id="Record" value="Record">
+        </div>
+        <div class="btn-container">
+          <h2> Request a thought </h2>
+          <input type="button" class="btns" id="Receive" value="Record">
+        </div>
+      </div>
     </body>
 </html>

@@ -6,6 +6,7 @@ const pathHandler = require("path")
 // Smarter ways of handling different sorts of server requests exists but we try to avoid frameworks.
 
 http.createServer(function(req, res){
+  console.log(req.url)
   if(req.method == "GET"){
     let reqPath = req.url;
     let fileExtension = pathHandler.extname(reqPath);
@@ -17,7 +18,6 @@ http.createServer(function(req, res){
       ".jpg":"image/jpeg",
       ".png":"image/png"
     }
-    console.log(reqPath, fileExtension)
     fileHandler.readFile("public" + reqPath, function(err, data){
       if(err){
           res.writeHead(404)
@@ -29,10 +29,14 @@ http.createServer(function(req, res){
         res.end();
       }
     })
-  }else if(req.method == "POST" && req.url == "req"){
+  }else if(req.method == "POST" && req.url == "/Record"){
+    res.writeHead(200, {"Content-Type": "text/html"})
     res.write("test1")
-  }else if(req.method == "POST" && req.url == "res"){
-    res.write("test2")
+    res.end();
+  }else if(req.method == "POST" && req.url == "/Receive"){
+    res.writeHead(200, {"Content-Type": "text/html"})
+    res.write("Hello from the server!")
+    res.end();
   }else{
     res.writeHead(505)
     res.write("Error 505 : Internal Server Error");

@@ -1,5 +1,16 @@
 console.log("Recieved ServerFile and index.html")
 
+function send(text, id){
+  let response = sendRequest(id, {
+    "data":text
+  })
+  response.then((data) => {
+    if(id == "Receive"){
+      speechSynthesise(data);
+    }
+  })
+}
+
 async function sendRequest(relativeUrl, data){
   var xhttp = new XMLHttpRequest();
   let promise = new Promise(function(resolve, reject){
@@ -14,7 +25,5 @@ async function sendRequest(relativeUrl, data){
   var bodyData = JSON.stringify(data);
   xhttp.send(bodyData);
   let result = await promise
-  result.then(function(value){
-      return value;
-  })
+  return result;
 }
