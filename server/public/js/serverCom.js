@@ -1,6 +1,7 @@
 console.log("Recieved ServerFile and index.html")
 
 function send(text, id){
+  console.log(text)
   let response = sendRequest(id, {
     "data":text
   })
@@ -24,6 +25,7 @@ async function sendRequest(relativeUrl, data){
   xhttp.setRequestHeader('Content-Type', 'application/json')
   var bodyData = JSON.stringify(data);
   xhttp.send(bodyData);
+  console.log(bodyData)
   let result = await promise
   return result;
 }

@@ -2,6 +2,23 @@ const http = require("http")
 const port = 3000
 const fileHandler = require("fs")
 const pathHandler = require("path")
+const mysql = require('mysql');
+const database = require('./database');
+const qs = require('querystring');
+
+const connection = mysql.createConnection({
+  password: "theROOTpass312",
+  host: "localhost",
+  user: "root",
+  port:'3306',
+  database:"brain"
+});
+
+connection.connect(function(error) {
+  if (error){
+    throw error;
+  }
+})
 
 // Smarter ways of handling different sorts of server requests exists but we try to avoid frameworks.
 
@@ -31,11 +48,23 @@ http.createServer(function(req, res){
     })
   }else if(req.method == "POST" && req.url == "/Record"){
     res.writeHead(200, {"Content-Type": "text/html"})
-    res.write("test1")
+    let body = [];
+    req.on('data', function(part) {
+      body.push(part);
+    }).on('end', () => {
+      body = JSON.parse(Buffer.concat(body).toString());
+      database.putInDatabase(body, connection);
+    });
     res.end();
   }else if(req.method == "POST" && req.url == "/Receive"){
     res.writeHead(200, {"Content-Type": "text/html"})
-    res.write("Hello from the server!")
+    let body = [];
+    req.on('data', function(part) {
+      body.push(part);
+    }).on('end', () => {
+      body = JSON.parse(Buffer.concat(body).toString());
+      res.write(database.getFromDatabase(body, connection));
+    });
     res.end();
   }else{
     res.writeHead(505)

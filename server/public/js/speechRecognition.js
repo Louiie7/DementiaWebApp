@@ -14,13 +14,15 @@ function startRecording(type){
     currentAccuRecording.push(recording.results[0][0].transcript);
     if(speechRecEngine.sender.isOn){
       startRecording(speechRecEngine.sender);
+    }else{
+      send(accumulate(currentAccuRecording), speechRecEngine.sender.id)
+      currentAccuRecording = []
     }
   }
 }
 
 function stopRecording(){
   speechRecEngine.engine.stop();
-  send(accumulate(currentAccuRecording), speechRecEngine.sender.id)
 }
 
 function accumulate(list){
