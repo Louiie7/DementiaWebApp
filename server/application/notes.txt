@@ -2,5 +2,8 @@ record
   Beregne keywords
 
 request
-  Beregne keywords
-  
+  Beregne Faktorer
+    Beregne keywords
+    Longest common substring
+    ...
+  Multivariable regression
