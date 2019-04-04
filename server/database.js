@@ -1,7 +1,10 @@
+let keyword = require('./application/keywords.js')
+
 module.exports = {
   putInDatabase(obj, conn){
-    console.log(obj.data)
-    conn.query('INSERT INTO notes (data) VALUES ("'+ obj.data + '")', function callback(error, res){})
+    let dataToQuery = keyword.getkeywords(obj.data)
+    console.log(dataToQuery)
+    conn.query('INSERT INTO notes (data) VALUES ("'+ dataToQuery + '")', function callback(error, res){})
   },
 
   getFromDatabase(obj, conn){
