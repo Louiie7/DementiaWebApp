@@ -54,8 +54,8 @@ http.createServer(function(req, res){
     }).on('end', () => {
       body = JSON.parse(Buffer.concat(body).toString());
       database.putInDatabase(body, connection);
+      res.end();
     });
-    res.end();
   }else if(req.method == "POST" && req.url == "/Receive"){
     res.writeHead(200, {"Content-Type": "text/html"})
     let body = [];
@@ -64,8 +64,8 @@ http.createServer(function(req, res){
     }).on('end', () => {
       body = JSON.parse(Buffer.concat(body).toString());
       res.write(database.getFromDatabase(body, connection));
+      res.end();
     });
-    res.end();
   }else{
     res.writeHead(505)
     res.write("Error 505 : Internal Server Error");

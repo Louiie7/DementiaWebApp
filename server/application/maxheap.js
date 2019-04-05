@@ -6,8 +6,19 @@ class MatrixIndex {
 }
 class MaxHeap {
     constructor(array) {
-    this.array = [null, ...array];
-    this.size = array.length
+      this.array = [null, ...array];
+      this.size = array.length
+    }
+
+    getArray(){
+      return this.array;
+    }
+
+    isEmpty(){
+      if(this.size == 0){
+        return true;
+      }
+      return false;
     }
 
     arrange(idx) {
@@ -41,6 +52,13 @@ class MaxHeap {
     }
 
     compare(idx1, idx2) {
+      //return this.array[idx1].num < this.array[idx2].num;
+      if(this.array[idx1].num == this.array[idx2].num){
+        if(this.array[idx1].pos[0] == this.array[idx2].pos[0]){
+          return this.array[idx1].pos[1] < this.array[idx2].pos[1];
+        }
+        return this.array[idx1].pos[0] < this.array[idx2].pos[0];
+      }
       return this.array[idx1].num < this.array[idx2].num;
     }
 
