@@ -13,7 +13,7 @@ window.onload = function() {
 function changetext(element, other) {
   element.addEventListener("click", function() {
     if(element.value == "Record" && !other.isOn) {
-      element.value = "Stop recording"
+      element.value = "Stop recording";
       element.isOn = true;
       element.style.backgroundColor = "red";
       startRecording(element);

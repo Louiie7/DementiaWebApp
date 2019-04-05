@@ -1,9 +1,10 @@
 record
-  Beregne keywords
+  Beregne keywords og tilhørende værdier
 
 request
   Beregne Faktorer
-    Beregne keywords
+    keywords
+    d: antal af keywords der stemmer overens
     Longest common substring
     ...
   Multivariable regression

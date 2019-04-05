@@ -13,7 +13,7 @@ module.exports = {
   }
 }
 function readFromFile(filename){
-  let content = fs.readFileSync(filename, 'utf8')
+  let content = fs.readFileSync(__dirname+"/"+filename, 'utf8')
   let common = content.split(",")
   return common
 }
