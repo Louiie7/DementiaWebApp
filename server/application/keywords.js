@@ -12,11 +12,11 @@ module.exports = {
     return Array.from(keywords);
   },
 
-  compareKeywords(setofkeywords, listofkeywords){
+  compareKeywords(setofkeywords, listofkeywords, keywordsHashTable){
     let counter = 0;
     for(let j = 0; j < listofkeywords.length; j++){
       if(setofkeywords.has(listofkeywords[j])){
-        counter++;
+        counter += keywordsHashTable[listofkeywords[j]];
       }
     }
     return counter

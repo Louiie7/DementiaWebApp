@@ -27,6 +27,7 @@ connection.connect(function(error) {
     });
 
     connection.query("CREATE TABLE notes (id int auto_increment, original MEDIUMTEXT, keywords MEDIUMTEXT, PRIMARY KEY (id))", function (error, data) {if (error){throw error;}});
-  });
+    connection.query("CREATE TABLE keywords (id int auto_increment, keyword MEDIUMTEXT, amount INT, associatedNotes MEDIUMTEXT, PRIMARY KEY (id))", function (error, data) {if (error){throw error;}});
 
+  });
 });

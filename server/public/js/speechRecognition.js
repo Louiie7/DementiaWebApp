@@ -4,8 +4,9 @@ let currentAccuRecording = [];
 
 //rekursiv funktion der akkumulere web speech data
 function startRecording(type){
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
   speechRecEngine = {
-    "engine": new webkitSpeechRecognition(),
+    "engine": new SpeechRecognition(),
     "sender":type
   };
   speechRecEngine.engine.onerror = (e) => {console.log(e)}
