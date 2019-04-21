@@ -20,6 +20,13 @@ connection.connect(function(error) {
   }
 })
 
+/*const configuration = {
+  cert: fileHandler.readFileSync("ssl/server-csr.pem"),
+  key: fileHandler.readFileSync("ssl/server-key.pem"),
+  //ca: fileHandler.readFileSync("ssl/cert.pem"),
+  //requestCert: true
+}*/
+
 // Smarter ways of handling different sorts of server requests exists but we try to avoid frameworks.
 
 http.createServer(function(req, res){
@@ -53,6 +60,7 @@ http.createServer(function(req, res){
       body.push(part);
     }).on('end', () => {
       body = JSON.parse(Buffer.concat(body).toString());
+      console.log(body)
       database.putInDatabase(body, connection);
       res.end();
     });
@@ -63,8 +71,11 @@ http.createServer(function(req, res){
       body.push(part);
     }).on('end', () => {
       body = JSON.parse(Buffer.concat(body).toString());
-      res.write(database.getFromDatabase(body, connection));
-      res.end();
+      database.getFromDatabase(body, connection).then((value) => {
+        res.write(value);
+        console.log(value);
+        res.end();
+      });
     });
   }else{
     res.writeHead(505)

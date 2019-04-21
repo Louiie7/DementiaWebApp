@@ -21,7 +21,7 @@ async function sendRequest(relativeUrl, data){
         }
     };
   })
-  xhttp.open("POST", relativeUrl, true);
+  xhttp.open("POST",  relativeUrl);
   xhttp.setRequestHeader('Content-Type', 'application/json')
   var bodyData = JSON.stringify(data);
   xhttp.send(bodyData);

@@ -59,7 +59,7 @@ function LCSS_optimized(rec, memo) {
     //counter++;
     //console.log(curr)
     if(isValid(curr, visitedREC, visitedMEMO)){
-      console.log(curr.num, curr.pos);
+      //console.log(curr.num, curr.pos);
       for(let k = 0; k < curr.num; k++){
         visitedREC[curr.pos[0] - k] = true;
         visitedMEMO[curr.pos[1] - k] = true;
@@ -152,6 +152,9 @@ function buildStringOf(str, amount){
 }
 
 module.exports.LCS = LCSS_optimized;
+module.exports.normalize = (numericalValue, request) => {
+  return numericalValue / (request.length * request.length)
+};
 
 /*
 console.time("timer");

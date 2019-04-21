@@ -1,0 +1,54 @@
+openssl req ^
+ -new -sha256 -nodes ^
+ -out demo.local.csr ^
+ -newkey rsa:2048 -keyout demo.local.key ^
+ -subj "/C=DK/ST=Copenhagen/L=Copenhagen/O=Example/OU=Example/CN=Local Certificate/emailAddress=demo@demo.com"
+
+
+openssl x509 ^
+ -req ^
+ -in demo.local.csr ^
+ -CA rootSSL.pem -CAkey rootSSL.key -CAcreateserial ^
+ -out demo.local.crt ^
+ -days 500 ^
+ -sha256 ^
+ -extfile <(echo " ^
+    authorityKeyIdentifier=keyid,issuer\n ^
+    basicConstraints=CA:FALSE\n ^
+    keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n ^
+    subjectAltName=DNS:demo.local ^
+   ")
+
+
+openssl x509 -req -in demo.local.csr -CA rootSSL.pem -CAkey rootSSL.key -CAcreateserial -out demo.local.crt -days 500 -sha256 -extfile <(echo "authorityKeyIdentifier=keyid,issuer\n basicConstraints=CA:FALSE\n keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n subjectAltName=DNS:demo.local")
+
+openssl x509 -req -in demo.local.csr -CA rootSSL.pem -CAkey rootSSL.key -CAcreateserial -out demo.local.crt -days 500 -sha256 -extfile <(echo "[ v3_ca ] authorityKeyIdentifier=keyid,issuer basicConstraints=CA:FALSE keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment subjectAltName=DNS:demo.local")
+
+openssl x509 -req -in demo.local.csr -CA rootSSL.pem -CAkey rootSSL.key -CAcreateserial -out demo.local.crt -days 500 -sha256 -extfile <(echo "[ v3_ca ]\n authorityKeyIdentifier=keyid,issuer\n basicConstraints=CA:FALSE\n keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n subjectAltName=DNS:dropbyke.loc ")>
+
+openssl x509 \
+ -req ^
+ -in demo.local.csr ^
+ -CA rootSSL.pem -CAkey rootSSL.key -CAcreateserial ^
+ -out demo.local.crt ^
+ -days 500 ^
+ -sha256 ^
+ -extfile <(echo "     [ v3_ca ]\n     authorityKeyIdentifier=keyid,issuer\n     basicConstraints=CA:FALSE\n     keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n     subjectAltName=DNS:dropbyke.loc    ")
+
+
+a
+openssl x509 ^
+ -req ^
+ -in demo.local.csr ^
+ -CA rootSSL.pem -CAkey rootSSL.key -CAcreateserial ^
+ -out demo.local.crt ^
+ -days 500 ^
+ -sha256 ^
+ -extfile <(echo "     [ v3_ca ]\n     authorityKeyIdentifier=keyid,issuer\n     basicConstraints=CA:FALSE\n     keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n     subjectAltName=DNS:dropbyke.loc    ")
+
+
+openssl req \
+ -new -sha256 -nodes \
+ -out demo.local.csr \
+ -newkey rsa:2048 -keyout demo.local.key \
+ -subj "/C=IN/ST=State/L=City/O=Organization/OU=OrganizationUnit/CN=demo/emailAddress=demo@example.com"

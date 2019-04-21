@@ -8,6 +8,7 @@ function startRecording(type){
     "engine": new webkitSpeechRecognition(),
     "sender":type
   };
+  speechRecEngine.engine.onerror = (e) => {console.log(e)}
   speechRecEngine.engine.lang = 'en-US';
   speechRecEngine.engine.start();
   speechRecEngine.engine.onresult = function(recording){
