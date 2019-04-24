@@ -10,7 +10,7 @@ function startRecording(type){
     "sender":type
   };
   speechRecEngine.engine.onerror = (e) => {console.log(e)}
-  speechRecEngine.engine.lang = 'en-US';
+  speechRecEngine.engine.lang = 'da-DK';
   speechRecEngine.engine.start();
   speechRecEngine.engine.onresult = function(recording){
     currentAccuRecording.push(recording.results[0][0].transcript);
@@ -28,5 +28,5 @@ function stopRecording(){
 }
 
 function accumulate(list){
-  return list.join("");
+  return list.join("").toLowerCase();
 }

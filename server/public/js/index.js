@@ -15,12 +15,12 @@ function changetext(element, other) {
     if(element.value == "Record" && !other.isOn) {
       element.value = "Stop recording";
       element.isOn = true;
-      element.style.backgroundColor = "red";
+      element.style.backgroundColor = "#ff5e57";
       startRecording(element);
     }
     else {
       element.value = "Record"
-      element.style.backgroundColor = "#42f450";
+      element.style.backgroundColor = "#0be881";
       element.isOn = false;
       stopRecording();
     }

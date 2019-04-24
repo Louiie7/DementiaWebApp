@@ -8,15 +8,32 @@
       <script src="js/speechSynthesis.js"></script>
       <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
+    <STYLE> A {text-decoration: none;} </STYLE>
     <body style="margin:0">
+      <header>
+        <nav>
+          <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "calendarpage.html">Calendar</a></li>
+          </ul>
+        </nav>
+      </header>
       <div id="container">
         <div class="btn-container">
           <h2> Record your thought </h2>
           <input type="button" class="btns" id="Record" value="Record">
         </div>
         <div class="btn-container">
-          <h2> Request a thought </h2>
-          <input type="button" class="btns" id="Receive" value="Record">
+          <div style="float:left;">
+            <h2> Request a thought </h2>
+            <input type="button" class="btns" id="Receive" value="Record">
+          </div>
+          <div style="float:inherit; margin-left:20px;">
+            <h2> Replay </h2>
+            <div class="btns" id="Replay" onClick="replay()">
+              <img src="resources/replay.png" alt="Replay button" id="replayimg">
+            </div>
+          </div>
         </div>
       </div>
     </body>

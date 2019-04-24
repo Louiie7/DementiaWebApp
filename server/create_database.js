@@ -1,7 +1,7 @@
 var mysql = require('mysql');
 
 let connection = mysql.createConnection({
-  password: "theROOTpass312",
+  password: "RootPassLouie",
   host: "localhost",
   user: "root",
   port:'3306',
@@ -19,7 +19,7 @@ connection.connect(function(error) {
     }
 
     connection = mysql.createConnection({
-      password: "theROOTpass312",
+      password: "RootPassLouie",
       host: "localhost",
       user: "root",
       port:'3306',
