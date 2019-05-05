@@ -2,36 +2,51 @@
 
 <html>
     <head>
-      <script src="js/index.js"></script>
+      <!-- All Scripts are loaded. The index.js file is loaded lastly since
+      we do not want code to run when not all resources are added -->
       <script src="js/serverCom.js"></script>
       <script src="js/speechRecognition.js"></script>
       <script src="js/speechSynthesis.js"></script>
+      <script src="js/index.js"></script>
+      <!-- index.css styles all the html elements across the website -->
       <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
-    <STYLE> A {text-decoration: none;} </STYLE>
+    <!-- the body margin is explicitely set to 0 to overwrite any
+    other styling and to make remove default margin -->
     <body style="margin:0">
+      <!-- The header element contains the navigations bar -->
       <header>
         <nav>
           <ul>
+            <!-- A li element in the ul list contains a link to another website subpage -->
             <li><a href = "index.html">Home</a></li>
-            <li><a href = "calendarpage.html">Calendar</a></li>
+            <li><a href = "html/calendar.html">Calendar</a></li>
           </ul>
         </nav>
       </header>
+      <!-- the container division contains the webapplication -->
       <div id="container">
+        <!-- the following to button container divisions contains a button and a
+        h2 element with a description of the particular button.
+        The alt attribute is statutory -->
         <div class="btn-container">
           <h2> Record your thought </h2>
-          <input type="button" class="btns" id="Record" value="Record">
+          <!-- all buttons has a unique id to identify which one has been pressed in the onclick method -->
+          <input type="button" alt="Record Button" class="btns" id="Record" value="Record">
         </div>
         <div class="btn-container">
+          <!-- float left makes, with the styling on neighbouring division, the two divisions float side by side -->
           <div style="float:left;">
             <h2> Request a thought </h2>
-            <input type="button" class="btns" id="Receive" value="Record">
+            <!-- all buttons has a unique id to identify which one has been pressed in the onclick method -->
+            <input type="button" alt="Receive Button" class="btns" id="Receive" value="Record">
           </div>
           <div style="float:inherit; margin-left:20px;">
             <h2> Replay </h2>
+            <!-- the replay button is implemented as a division to allow it to have an image as background.
+            The replay function is called when the user clicks the division containing the image of the replay icon -->
             <div class="btns" id="Replay" onClick="replay()">
-              <img src="resources/replay.png" alt="Replay button" id="replayimg">
+              <img src="resources/replay.png" alt="Replay Button" id="replayimg">
             </div>
           </div>
         </div>

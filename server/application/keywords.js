@@ -2,7 +2,7 @@ let fs = require('fs');
 module.exports = {
   getkeywords(string) {
     let words = string.split(" ")
-    let common = new Set(readFromFile("commonwords.csv"))
+    let common = new Set(readFromFile("commonwords.csv")) //could be saved
     let keywords = new Set();
     for(let i = 0; i < words.length; i++) {
       if(!common.has(words[i])){

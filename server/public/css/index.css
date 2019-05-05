@@ -1,44 +1,60 @@
+/*This css styling file contains styling for all classes, ids and tags*/
+
+/*The buttons containers*/
 .btn-container {
-  float:left;
-  margin:5%;
-  padding:20px;
-  background-color: #f1f2f6;
-  box-shadow: 3px 3px 5px 6px #ccc;
-  border-radius: 20px;
+  float:left; /*makes division position on the left side*/
+  margin:5%; /*makes the division push everything away with 5% of the webpage width*/
+  padding:20px; /*everything inside the division is distanced from the border with 20px*/
+  background-color: #f1f2f6; /*sets the background color*/
+  box-shadow: 3px 3px 5px 6px #ccc; /*puts a nice shadow on the edges of the division*/
+  border-radius: 20px; /*the radius of the border surrounding the division*/
 }
 
+/*The actual input elements for the buttons*/
 .btns{
-  width:100px;
-  height:100px;
-  margin:0 30%;
-  border:2  px solid black;
-  background-color:#0be881;
-  color:black;
-  border-radius: 50px;
+  width:100px; /*Sets the width of the buttons, although they ought to have a dynamic width*/
+  height:100px; /*Same as for width*/
+  margin:0 30%; /*The top and bottom margin is 0 but the right and left is 30%.
+   Top and bottom margins cannot be configured in percentage since the height is not fixed*/
+  border:2  px solid black; /*the border surrounding the buttons*/
+  background-color:#0be881; /*background color*/
+  color:black; /*the font color inside the bottuns*/
+  border-radius: 50px; /*the radius of the buttons*/
 }
 
+/*The header element containing the navigation bar*/
 header{
-  background: #C8E6C9;
-  padding: 3px;
+  background: #C8E6C9; /*background color*/
+  padding: 3px; /*everything inside the header container is distanced from the edge by 3 pixels*/
 }
+
+/*The list of links in the navigation bar*/
 ul {
-  margin: 0;
-  padding 0;
-  list-style-type: none;
+  margin: 0; /*removes default margin*/
+  padding: 0; /*removes default padding*/
 }
+
+/*A single element in the above list*/
 li{
-  display: inline-block;
-  margin-right: 20px;
-  color: white;
+  display: inline-block; /*makes the elements display side by side*/
+  margin-right: 20px; /*distances the elements from each other vertically*/
+  color: white; /*the text color of the elements*//**/
 }
 
+/*The link tag for the elements in the navigation bar*/
+A{
+  text-decoration: none; /*removes underscore under the text inside the link tags*/
+}
+
+/*The replay button*/
 #Replay {
-  float: left;
-  width:50px;
-  background: url("../resources/replay.png");
-  margin-top: 20px;
+  float: left; /*display on the right (yes the right) side of recieve button*/
+  width:50px; /*sets the width*/
+  background: url("../resources/replay.png"); /*adds the replay icon as the background images of the division*/
+  margin-top: 20px; /*just for positioning the division at the same height as the recieve buttons*/
 }
 
+/*The image inside the replay button division*/
 #replayimg {
-  max-width:50px;
+  max-width:50px; /*constains the width to make it no larger than the 50px*/
 }
