@@ -1,5 +1,3 @@
-// https://www.geeksforgeeks.org/longest-common-substring-dp-29/
-
 let PQ = require(__dirname +"/maxheap");
 
 //it is not perfect since some matrix positions exlude other matrix positions. Therefore another dynamic solution is needed to optimize the sum. Although the importance is just that the result is equevalent for all cases.
@@ -130,7 +128,7 @@ function normalize(numericalValue, request){
   return numericalValue / (request.length * request.length)
 }
 
-module.exports.LCS = CSS_optimized;
+module.exports.CSS = CSS_optimized;
 module.exports.normalize = normalize;
 
 /*

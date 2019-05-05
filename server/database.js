@@ -1,5 +1,5 @@
 let keyword = require('./application/keywords.js')
-let lcs = require('./application/LCS.js')
+let css = require('./application/CCS.js')
 let linearModel = require('./application/linearModel.js')
 
 module.exports = {
@@ -41,27 +41,32 @@ module.exports = {
   }
 }
 
+/*return the index in the res list that corressponds to the best matching note.
+The res list contains a list of RowDataPackets from the database.
+The request is a String containing the actual request recorded on the website
+keywords is a Set of Strings which are keywords. The keywordweightsHashTable
+is a HashMap with weigting of individual keywords that are contained in the request*/
 function findBestMatchingNote(res, request, keywords, keywordweightsHashTable){
-  let max = 0;
-  let maxIndex = -1;
-  for(let i = 0; i < res.length; i++){
-    let noteKeywords = res[i].keywords.split(",");
-    const factor_1 = keyword.compareKeywords(keywords, noteKeywords, keywordweightsHashTable);
-    const factor_2 = lcs.LCS(request, res[i].original);
-    const factor_1_normalized = keyword.normalize(factor_1, keywords);
-    const factor_2_normalized = lcs.normalize(factor_2, request);
-    const factor_3_normalized = lcs.normalize(factor_2, res[i].original);
-    const result = linearModel.evaluate([
+  let max = 0.0; //the max variable contains the maximum output from the statistical model
+  let maxIndex = -1; //contains the index corresponding to the max value.
+  for(let i = 0; i < res.length; i++){ //looping over all the notes with at least on matching keyword
+    let noteKeywords = res[i].keywords.split(","); //splits the String of all keywords from the database into a list of Strings
+    const factor_1 = keyword.compareKeywords(keywords, noteKeywords, keywordweightsHashTable); // finds the matching keywords sum
+    const factor_2 = css.CSS(request, res[i].original); // finds sum of common substrings.
+    const factor_1_normalized = keyword.normalize(factor_1, keywords); // normalizes the keyword factor
+    const factor_2_normalized = css.normalize(factor_2, request); // normalizes the common substrings factor in relation to the request
+    const factor_3_normalized = css.normalize(factor_2, res[i].original); // also normalises in relation to the particular note
+    const result = linearModel.evaluate([ //based on the normalised factors a single weigted value is calculated
       factor_1_normalized,
       factor_2_normalized,
       factor_3_normalized
-    ]) * (factor_1_normalized == 0 ? 0 : 1);
-    if(result > max){
+    ]) * (factor_1_normalized == 0 ? 0 : 1); // if there is no keywords matching then the note should not even be considered
+    if(result > max){ // if this note is better than the currently best note then update the max and maxIndex variables
       max = result;
       maxIndex = i;
     }
   }
-  return maxIndex;
+  return maxIndex; // the best matching notes index is returned.
 }
 
 async function buildNoteQueryStringAndKeywordTable(connection, keywordQueryString){

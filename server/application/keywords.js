@@ -1,27 +1,35 @@
-let fs = require('fs');
-module.exports = {
+//keywords.js contains everything related to finding and comparing keywords in strings.
+
+let fs = require('fs'); // file reader
+module.exports = { // makes the functions in the object accesible in the keywords module.
+
+  // returns and array of Strings containing keywords from the string input.
   getkeywords(string) {
-    let words = string.split(" ")
-    let common = new Set(readFromFile("commonwords.csv")) //could be saved
-    let keywords = new Set();
-    for(let i = 0; i < words.length; i++) {
-      if(!common.has(words[i])){
-        keywords.add(words[i])
+    let words = string.split(" ") //creates a list of words
+    let common = new Set(readFromFile("commonwords.csv")) /* the common variable contains common english words.
+    This could be optimized by saving the list of common words for laster use. */
+    let keywords = new Set(); // initializes a set of keywords to keep track of the keywords in the string. A set is used to avoid duplicates.
+    for(let i = 0; i < words.length; i++) { // all the words in the words list is considered
+      if(!common.has(words[i])){ // only add given word if it is not a common word
+        keywords.add(words[i]) // add the given to the Set of keywords
       }
     }
-    return Array.from(keywords);
+    return Array.from(keywords); // convert the Set to a list to make the keywords compatible outside the function
   },
 
+  /* returns a sum representing the keywords matching between the setofkeywords and the listofkeywords.
+   The keywordsHashTable contains the "importance" factor of a given keyword */
   compareKeywords(setofkeywords, listofkeywords, keywordsHashTable){
-    let counter = 0;
-    for(let j = 0; j < listofkeywords.length; j++){
-      if(setofkeywords.has(listofkeywords[j])){
-        counter += keywordsHashTable[listofkeywords[j]];
+    let result = 0; // contains the mentioned sum
+    for(let j = 0; j < listofkeywords.length; j++){ // all the keywords in the listofkeywords are considered
+      if(setofkeywords.has(listofkeywords[j])){ // only add the given keyword from the listofkeywords if it is contained in the setofkeywords
+        result += keywordsHashTable[listofkeywords[j]]; // append "importance" factor of the keyword to the result variable
       }
     }
-    return counter
+    return result // return the factor describing common keywords.
   },
 
+  // normalizes the value 
   normalize(numericalValue, totalKeywords){
     return numericalValue / totalKeywords.size;
   }

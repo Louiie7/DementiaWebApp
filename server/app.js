@@ -1,7 +1,9 @@
-const http = require("http")
-const port = 3000
-const fileHandler = require("fs")
-const pathHandler = require("path")
+//this file contains everything
+
+const http = require("http"); // the http
+const port = 3000;
+const fileHandler = require("fs");
+const pathHandler = require("path");
 const mysql = require('mysql');
 const database = require('./database');
 const qs = require('querystring'); //Uppercase is not a convention in node js.

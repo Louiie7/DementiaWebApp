@@ -18,15 +18,16 @@ function startRecording(type){
 /* returns null: onResult(recording) when the speech recognition engine stops after a preset time limit
   or no speech the onResult function is called as a callback. The recording object contains the transcript of the recording*/
 function onResult(recording){
-  currentAccuRecording.push(recording.results[0][0].transcript);
-  if(speechRecEngine.sender.isOn){
-    startRecording(speechRecEngine.sender);
-  }else{
+  currentAccuRecording.push(recording.results[0][0].transcript); // the current piece of recording is appended to the list of pieces
+  if(speechRecEngine.sender.isOn){ // if still recording
+    startRecording(speechRecEngine.sender); // then start a new recording
+  }else{ // else send a request to the server with the recording as a String and the type of request (record or recieve)
     sendRequestToServer(currentAccuRecording.join("").toLowerCase(), speechRecEngine.sender.id)
-    currentAccuRecording = []
+    currentAccuRecording = [] // reset the list of pieces of recordings
   }
 }
 
+// returns null: stops the engine recording.
 function stopRecording(){
   speechRecEngine.engine.stop();
 }
