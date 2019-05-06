@@ -1,3 +1,6 @@
+//This file contains the MaxHeap class. For detailed documentation see the rapport for MRRAD af section 13.
+
+// A custom class for elements in the MaxHeap
 class MatrixIndex {
     constructor(num, pos) {
         this.num = num
@@ -5,13 +8,14 @@ class MatrixIndex {
     }
 }
 
-
+//The MaxHeap class
 class MaxHeap {
-    constructor(elements) {
-      this.elements = [null, ...elements];
+    constructor(elements) { // setup of the MaxHeap
+      this.elements = [null, ...elements]; // the list of elements is 1-indexed.
       this.length = elements.length
     }
 
+    //returns the maximum element in the maxheap
     rootdelete() {
       let max = this.elements[1]
       this.changePosition(1, this.length--);
@@ -20,15 +24,18 @@ class MaxHeap {
       return max;
     }
 
+    //return null: inserts a element in the maxheap
     insert(element) {
       this.elements[++this.length] = element;
       this.arrangeFromBottom(this.length);
     }
 
+    //returns all elements in the maxheap
     getelements(){
       return this.elements;
     }
 
+    // return boolean representing whether the maxheap is empty
     isEmpty(){
       if(this.length == 0){
         return true;
@@ -36,6 +43,7 @@ class MaxHeap {
       return false;
     }
 
+    // returns a boolean representing whether the element at index1 or index2 should be above or below the other.
     compareIndices(index1, index2) {
       if(this.elements[index1].num == this.elements[index2].num){
         if(this.elements[index1].pos[0] == this.elements[index2].pos[0]){
@@ -46,12 +54,14 @@ class MaxHeap {
       return this.elements[index1].num < this.elements[index2].num;
     }
 
+    // returns null: swaps the elements at index1 and index2
     changePosition(index1, index2) {
       const temp = this.elements[index1];
       this.elements[index1] = this.elements[index2];
       this.elements[index2] = temp;
     }
 
+    //returns null: balances the maxheap to make sure the maximum element is on top after an insertion
     arrangeFromBottom(index) {
       while (index > 1 && this.compareIndices(Math.floor(index / 2), index)) {
         this.changePosition(index, Math.floor(index / 2));
@@ -59,6 +69,7 @@ class MaxHeap {
       }
     }
 
+    // returns null:balances the maxheap to make sure the maximum element is on top after a rootdeletion
     arrangeFromTop(index1) {
       while (2 * index1 <= this.length) {
         let index2 = 2 * index1;
@@ -70,5 +81,6 @@ class MaxHeap {
     }
 }
 
+//exports the classes as a module accesible by other files
 module.exports.MaxHeap = MaxHeap;
 module.exports.MatrixIndex = MatrixIndex;

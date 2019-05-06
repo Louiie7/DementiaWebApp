@@ -7,7 +7,7 @@ function speechSynthesise(data){
   let speechSynthesiser = window.speechSynthesis;
   let stringToSpeak = new SpeechSynthesisUtterance(data); // create new instance of the built in speachSynthesis class.
   stringToSpeak.rate = 1; //speaking pace
-  speechSynthesiser.speak(stringToSpeak) // speaks aloud
+  speechSynthesiser.speak(stringToSpeak); // speaks aloud
 }
 
 // returns null:  replay() replays the last string that was speechsynthesised.

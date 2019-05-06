@@ -4,7 +4,7 @@ let currentAccuRecording = []; //String[]: contains a list of the strings record
 
 //returns null, startRecording(Element type) starts a recording. Type is a customized dom element to identify the type of recording: record or request.
 function startRecording(type){
-  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
   speechRecEngine = { //initializes a custom speech reqocnition objekt with the actual engine and the button that was clicked as a property
     "engine": new SpeechRecognition(),
     "sender": type //type is the dom element - the button
@@ -22,8 +22,8 @@ function onResult(recording){
   if(speechRecEngine.sender.isOn){ // if still recording
     startRecording(speechRecEngine.sender); // then start a new recording
   }else{ // else send a request to the server with the recording as a String and the type of request (record or recieve)
-    sendRequestToServer(currentAccuRecording.join("").toLowerCase(), speechRecEngine.sender.id)
-    currentAccuRecording = [] // reset the list of pieces of recordings
+    sendRequestToServer(currentAccuRecording.join("").toLowerCase(), speechRecEngine.sender.id);
+    currentAccuRecording = []; // reset the list of pieces of recordings
   }
 }
 
