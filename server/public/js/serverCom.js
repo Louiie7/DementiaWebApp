@@ -1,3 +1,5 @@
+//this file contains everything related to communication from client to server.
+
 /*returns null: sendRequestToServer(String text, String id) sends the recording (text)
  to the server along with the type of recording (id)*/
 function sendRequestToServer(text, id){

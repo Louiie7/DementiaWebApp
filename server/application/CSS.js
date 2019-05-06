@@ -1,3 +1,5 @@
+//this file contains everything related to common substrings.
+
 let PQ = require(__dirname +"/maxheap");
 
 /*return a sum of common substring found between str1 and str2 based on the input of String str1 and String str2.

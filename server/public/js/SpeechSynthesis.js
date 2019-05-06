@@ -1,3 +1,5 @@
+//this file contains everything related to speech synthesis
+
 let last_data; // String: contains the last string to be speechsynthesised.
                 //Initially is is null and will throw error if replay button is clicked
 

@@ -1,3 +1,5 @@
+//this file contains everything related to speech recognition
+
 let speechRecEngine; //SpeechRecognition butt initially null: contains the speach recognition engine
 
 let currentAccuRecording = []; //String[]: contains a list of the strings recorded for the current recording

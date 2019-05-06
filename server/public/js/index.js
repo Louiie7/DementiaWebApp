@@ -1,3 +1,5 @@
+//this file contains everything related to evertlisteners on the website
+
 window.onload = onLoad; // the onLoad function is now called when the page is loaded
 
 //returns null: onLoad() configures eventlisteners for the record and receive buttons.
