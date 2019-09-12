@@ -5,5 +5,6 @@
   "tags" : ["js", "nodejs", "css", "html", "data structures", "dynamic programming", "sql", "dbms"],
   "view" : null,
   "date" : "April 2019",
-  "code" : "https://github.com/williamMBDK/MRRAD"
+  "code" : "https://github.com/williamMBDK/MRRAD",
+  "multiple" : true
 }
